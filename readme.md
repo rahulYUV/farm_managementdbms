@@ -1,6 +1,6 @@
 
 # Farm Management System
-![Farm Management System Screenshot](static/images/your_image.png)
+![Farm Management System Screenshot](static/images/bg.jpg)
 
 ## Project Description
 
