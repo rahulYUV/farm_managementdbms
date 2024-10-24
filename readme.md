@@ -25,10 +25,27 @@ The **Farm Management System** is a web-based platform designed for farmers to s
 
 ## Project Structure
 
-├── app.py # Main Flask application file ├── config.py # Configuration settings for the app ├── templates/ # HTML templates │ ├── base.html # Base template │ ├── index.html # Homepage │ ├── login.html # Login page │ ├── register.html # Registration page │ └── product_list.html # Product listing page ├── static/ # Static files (CSS, images, JS) │ ├── css/ │ ├── js/ │ └── images/ ├── models.py # SQLAlchemy models for the database ├── forms.py # Flask-WTF forms for user inputs ├── requirements.txt # Python dependencies └── README.md # Project documentation
 
-bash
-Copy code
+### Description of Key Components
+
+- **app.py**: This is the main Flask application file where the app is initialized, routes are defined, and core functionalities are handled.
+- **config.py**: Stores the configuration settings such as database URI, secret keys, and other environment-specific variables.
+- **templates/**: Contains all HTML templates using Jinja2. These files are used to render the frontend UI.
+  - `base.html`: Base layout template for the project, extended by other templates.
+  - `index.html`: The homepage of the application.
+  - `login.html`: Template for user login.
+  - `register.html`: Template for user registration.
+  - `product_list.html`: Page displaying a list of products.
+- **static/**: Contains static assets like CSS, JavaScript, and images.
+  - `css/`: Stylesheets used for designing the frontend.
+  - `js/`: JavaScript files for adding dynamic behavior to the web pages.
+  - `images/`: Static images used in the project.
+- **models.py**: Defines the SQLAlchemy models that represent the structure of your database.
+- **forms.py**: Contains Flask-WTF forms used for handling and validating user input for forms such as login, registration, etc.
+- **requirements.txt**: Lists all the Python dependencies required to run the application.
+- **README.md**: This file provides a detailed overview of the project, including setup instructions, usage, and additional information.
+
+
 
 ## Installation
 
@@ -38,33 +55,40 @@ To run this project locally, follow these steps:
    ```bash
    git clone https://github.com/rahulYUV/farm_managementdbms.git
    cd farm_managementdbms
-Set up a virtual environment:
+   ```
 
-bash
-python -m venv env
-source env/bin/activate  # On Windows: env\Scripts\activate
-Install the dependencies:
+2. **Set up a virtual environment:**
 
-bash
+   ```bash
+   python -m venv env
+   source env/bin/activate  # On Windows: env\Scripts\activate
+   ```
 
-pip install -r requirements.txt
-Set up the environment variables: Create a .env file in the root directory and set the necessary environment variables (e.g., secret key, email server credentials).
+3. **Install the dependencies:**
 
-Initialize the database:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-bash
+4. **Set up the environment variables: Create a .env file in the root directory and set the necessary environment variables (e.g., secret key, email server credentials).**
 
-flask db init
-flask db migrate
-flask db upgrade
-Run the Flask app:
+   Initialize the database:
 
-bash
+   ```bash
+   flask db init
+   flask db migrate
+   flask db upgrade
+   ```
 
-flask run
-Open the app in your browser: Visit http://127.0.0.1:5000/ to access the Farm Management System.
+5. **Run the Flask app:**
 
-Usage
+   ```bash
+   flask run
+   ```
+
+6. **Open the app in your browser: Visit http://127.0.0.1:5000/ to access the Farm Management System.**
+
+## Usage
 Farmers can register on the platform, log in, and list their products for sale.
 Buyers can browse the available products and place purchase requests.
 Admin can monitor the platform and manage user activity.
