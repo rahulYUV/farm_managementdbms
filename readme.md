@@ -38,33 +38,40 @@ To run this project locally, follow these steps:
    ```bash
    git clone https://github.com/rahulYUV/farm_managementdbms.git
    cd farm_managementdbms
-Set up a virtual environment:
+   ```
 
-bash
-python -m venv env
-source env/bin/activate  # On Windows: env\Scripts\activate
-Install the dependencies:
+2. **Set up a virtual environment:**
 
-bash
+   ```bash
+   python -m venv env
+   source env/bin/activate  # On Windows: env\Scripts\activate
+   ```
 
-pip install -r requirements.txt
-Set up the environment variables: Create a .env file in the root directory and set the necessary environment variables (e.g., secret key, email server credentials).
+3. **Install the dependencies:**
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. **Set up the environment variables: Create a .env file in the root directory and set the necessary environment variables (e.g., secret key, email server credentials).**
 
 Initialize the database:
 
-bash
+   ```bash
+   flask db init
+   flask db migrate
+   flask db upgrade
+   ```
 
-flask db init
-flask db migrate
-flask db upgrade
-Run the Flask app:
+5. **Run the Flask app:**
 
-bash
+   ```bash
+   flask run
+   ```
 
-flask run
-Open the app in your browser: Visit http://127.0.0.1:5000/ to access the Farm Management System.
+6. **Open the app in your browser: Visit http://127.0.0.1:5000/ to access the Farm Management System.**
 
-Usage
+## Usage
 Farmers can register on the platform, log in, and list their products for sale.
 Buyers can browse the available products and place purchase requests.
 Admin can monitor the platform and manage user activity.
