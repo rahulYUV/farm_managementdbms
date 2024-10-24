@@ -55,7 +55,7 @@ To run this project locally, follow these steps:
 
 4. **Set up the environment variables: Create a .env file in the root directory and set the necessary environment variables (e.g., secret key, email server credentials).**
 
-Initialize the database:
+   Initialize the database:
 
    ```bash
    flask db init
